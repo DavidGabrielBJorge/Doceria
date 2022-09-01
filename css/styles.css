@@ -1,0 +1,316 @@
+/* CSS PRINCIPAL */
+html {
+	font-family: 'Open sans', 'sans-serif';
+	color: #373A3C;
+}
+
+a {
+	transition: .5s;/* Todos os hover terão 5s de transição */
+}
+
+/*========================ESTILO DO SIDEBAR========================*/
+#sidebar {
+	position: fixed;/*Posição fixa*/
+	height: 100%;/*Ocupa toda a parte vertical do site*/
+	width: 300px;/*Ocupa 300px da parte horizontal do site*/
+	background-color: #006599;
+	padding-top: 50px;
+}
+
+/*=======Texto a=======*/
+#sidebar h1 {
+	color: #FFF;
+	font-size: 32px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+/*=======Texto h1=======*/
+#sidebar a {
+	color: #FFF;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+/*=======ao passar o mouse as letras trocarão de cor=======*/
+#sidebar a:hover {
+	color: #F4EF5E;
+}
+
+#sidebar li {
+	padding: 20px;
+}
+
+/*========================CENTRALIZANDO O CONTEUDO DO SIDEBAR========================*/
+.sidebar-container {
+	position: relative;/*posição relativa com o que for escrito*/
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+}
+
+/*========================ESTILO DA LOGO========================*/
+.logo-doceria {
+	width: 60px;
+	height: 60px;
+	display: block;/*Garante que fica em uma linha só*/
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*========================ESTILO DO CONTEUDO PRINCIPAL========================*/
+.content {
+	position: absolute;/*=======posição relacionado a posição do elemento anterior=======*/
+	left: 300px;
+	width: calc(100% - 300px);
+}
+
+/*=======h1 e h2 do conntent=======*/
+.content h1, .content h2 {
+	color: #006599;
+	margin-bottom: 30px;
+}
+
+.content h1 {
+	font-size: 50px;
+}
+
+.content h2 {
+	font-size: 35px;
+}
+
+section {
+	padding-left: 50px;
+}
+
+
+/*========================ESTILO DA SESSAO BEM-VINDO========================*/
+#sessao-bemvindo {
+	padding-left: 0;
+}
+
+.sessao-bemvindo-content {
+	padding-left: 50px;
+}
+
+/*=======imagem do banner=======*/
+#sessao-bemvindo .banner {
+	height: 500px;
+	background-image: url('../img/banner2.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+#sessao-bemvindo h1 {
+	margin-top: 70px;
+}
+
+#sessao-bemvindo::after, #sessao-sobre::after {
+	/*
+	Como possui a sessao bemvindo e sobre no mesmo main, uma sobressai a outra,
+	para consertar esse erro deve inserir uma div vazia abaixo da sessao bemvindo
+	*/
+	content: "";
+	display: block;
+	clear: both;/*Ambos os eleementos não podem flutuar*/
+	margin-bottom: 100px;
+}
+
+.sessao-minibanner {
+	width: 300px;
+	height: 400px;
+	background-image: url('../img/banner3.jpg');
+	background-position: center;
+	background-size: cover;
+	float: left;
+}
+
+.sessao-descricao {
+	position: absolute;
+	left: 370px;
+	padding-right: 30px;
+}
+
+.sessao-descricao p {
+	line-height: 2;
+	font-size: 16px;
+	margin-bottom: 30px;
+	margin-left: 25px;
+}
+
+/*=======botão "leia mais"=======*/
+.sessao-bemvindo-btn, form input[type=submit] {
+	background-color: #006599;
+	color: #FFF;
+	text-decoration: none;
+	padding: 20px 40px;
+	transition: .5s;
+	display: block;
+	width: 100px;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	margin-left: 25px;
+}
+
+.sessao-bemvindo-btn:hover, form input[type=submit]:hover {
+	background-color: #2790C6;
+}
+
+/*========================ESTILO DA SESSAO SOBRE========================*/
+
+#sessao-sobre .sessao-minibanner {/*estilizando a sessao-minibanner*/
+	float: right;/*Imagem vai para a direita*/
+	margin-right: 50px;
+	background-image: url('../img/banner4.jpg');
+}
+
+#sessao-sobre .sessao-descricao {
+	position: absolute;
+	left: 25px;
+	width: calc(100% - 400px);/*Como a imagem tem 400px de largura, ele vai pegar toda a largura da tela menos a largura da imagem*/
+}
+
+/*========================ESTILO DA GALERIA========================*/
+
+.banner-galeria {
+	background-position: center;
+	background-size: cover;/*Preencem de acordo com os tammanhos*/
+	display: inline-block;
+	height: 200px;
+}
+
+#sessao-doces1{
+	padding-top: 40px;
+}
+
+#sessao-doces1, #sessao-doces2, #sessao-doces3 {
+	padding-right: 50px;
+	margin-bottom: 50px;
+}
+
+/*5 imagens com 18.8% e o resto é espaçamento*/
+.doces1-imgs {
+	width: 18.8%;/*deve colocar esse valor por ser perto de 100%*/
+	margin-left: .5%;
+	margin-right: .5%;
+}
+
+/*=======botão "inserindo imagens"=======*/
+#img1 {
+	background-image: url('../img/galeria1.jpg');
+	margin-left: 0;
+}
+
+#img2 {
+	background-image: url('../img/galeria2.jpg');
+}
+
+#img3 {
+	background-image: url('../img/galeria3.jpg');
+}
+
+#img4 {
+	background-image: url('../img/galeria4.jpg');
+}
+
+#img5 {
+	background-image: url('../img/galeria5.jpg');
+	margin-right: 0;
+}
+
+/*3 imagens com 32.8% e o resto é espaçamento*/
+.doces2-imgs {
+	width: 32.3%;
+	margin-left: .5%;
+	margin-right: .5%;
+}
+
+#img6 {
+	background-image: url('../img/galeria6.jpg');
+	margin-left: 0;
+}
+
+#img7 {
+	background-image: url('../img/galeria7.jpg');
+}
+
+#img8 {
+	background-image: url('../img/galeria8.jpg');
+	margin-right: 0;
+}
+
+/*4 imagens com 23.9% e o resto é espaçamento*/
+.doces3-imgs {
+	width: 23.9%;
+	margin-left: .5%;
+	margin-right: .5%;
+}
+
+#img9 {
+	background-image: url('../img/galeria9.jpg');
+	margin-left: 0;
+}
+
+#img10 {
+	background-image: url('../img/galeria10.jpg');
+}
+
+#img11 {
+	background-image: url('../img/galeria11.jpg');
+}
+
+#img12 {
+	background-image: url('../img/galeria12.jpg');
+	margin-right: 0;
+}
+
+/*========================ESTILO DO CONTATO========================*/
+#form-contato {
+	width: 500px;
+}
+
+#form-contato input[type=text], #form-contato input[type=email], #form-contato textarea {
+	display: block;
+	border: 1px solid #006599;
+	padding: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+	font-size: 16px;
+	font-family: 'Open sans', sans-serif;
+}
+
+#form-contato input[type=text]:focus, #form-contato input[type=email]:focus, #form-contato textarea:focus {
+	border-color: #2790C6;
+}
+
+#form-contato textarea {
+	height: 150px;
+}
+
+/*muda a cor das letras do placeholder*/
+#form-contato ::placeholder {
+	color: #2790C6;
+}
+
+#form-contato input[type=submit] {
+	margin-left: 0;
+	font-size: 16px;
+	width: 180px;
+}
+
+
+/*========================ESTILO DO FOOTER========================*/
+footer {
+	height: 100px;
+	padding-top: 150px;
+	color: #006599;
+}
+
+footer p {
+	text-align: center;
+	font-weight: bold;
+}
